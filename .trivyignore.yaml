@@ -3,3 +3,13 @@ misconfigurations:
     statement: The HEALTHCHECK instruction is meaningless in a Kubernetes context.
   - id: AVD-KSV-0011
     statement: Configuring Kubernetes CPU limits is considered bad practice.
+  - id: AVD-KSV-0032
+    statement: Depricated registry check
+  - id: AVD-KSV-0033
+    statement: Depricated registry check
+  - id: AVD-KSV-0034
+    statement: Depricated registry check
+  - id: AVD-KSV-0035
+    statement: Depricated registry check
+  - id: AVD-KSV-0125
+    statement: It fires on the helm deployment template
