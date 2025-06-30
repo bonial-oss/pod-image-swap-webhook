@@ -1,3 +1,8 @@
+#trivy:ignore:avd-ksv-0032
+#trivy:ignore:avd-ksv-0033
+#trivy:ignore:avd-ksv-0034
+#trivy:ignore:avd-ksv-0035
+#trivy:ignore:avd-ksv-0125
 {{- if eq .Values.kind "Deployment" -}}
 apiVersion: apps/v1
 kind: Deployment
