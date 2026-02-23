@@ -7,7 +7,7 @@ kind: Deployment
 replicaCount: 2
 
 image:
-  repository: ghcr.io/bonial-international-gmbh/pod-image-swap-webhook
+  repository: ghcr.io/bonial-oss/pod-image-swap-webhook
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
   tag: ""
