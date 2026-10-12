@@ -37,14 +37,17 @@ jobs:
 
       - name: Format Tag
         id: formatTag
+        env:
+          REPO_OWNER: ${{ github.repository_owner }}
+          GIT_REF: ${{ github.ref }}
         run: |
-          IMAGE_ID="ghcr.io/${{ github.repository_owner }}/$IMAGE_NAME"
+          IMAGE_ID="ghcr.io/$REPO_OWNER/$IMAGE_NAME"
 
           # Change all uppercase to lowercase
           IMAGE_ID=$(echo "$IMAGE_ID" | tr '[:upper:]' '[:lower:]')
 
           # Strip git ref prefix from version
-          VERSION=$(echo "${{ github.ref }}" | sed -e 's,.*/\(.*\),\1,')
+          VERSION=$(echo "$GIT_REF" | sed -e 's,.*/\(.*\),\1,')
 
           # Use Docker `latest` tag convention for `main` branch
           if [ "$VERSION" == "main" ]; then
