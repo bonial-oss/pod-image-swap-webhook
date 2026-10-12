@@ -47,7 +47,7 @@ jobs:
           IMAGE_ID=$(echo "$IMAGE_ID" | tr '[:upper:]' '[:lower:]')
 
           # Strip git ref prefix from version
-          VERSION=$(echo "$GIT_REF" | sed -e 's,.*/\(.*\),\1,')
+          VERSION="${GIT_REF##*/}"
 
           # Use Docker `latest` tag convention for `main` branch
           if [ "$VERSION" == "main" ]; then
