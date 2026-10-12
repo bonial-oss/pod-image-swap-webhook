@@ -4,7 +4,7 @@ go 1.26.9
 
 require (
 	github.com/stretchr/testify v1.11.1
-	gomodules.xyz/jsonpatch/v2 v2.4.0
+	gomodules.xyz/jsonpatch/v2 v2.5.0
 	gopkg.in/yaml.v2 v2.4.0
 	k8s.io/api v0.37.1
 	k8s.io/apimachinery v0.37.1
