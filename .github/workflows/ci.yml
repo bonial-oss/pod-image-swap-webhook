@@ -21,6 +21,7 @@ jobs:
         uses: actions/checkout@v6
         with:
           fetch-depth: 0
+          persist-credentials: false
 
       - name: Setup
         uses: actions/setup-go@v6
@@ -28,14 +29,6 @@ jobs:
           go-version: ${{ matrix.go-version }}
           # Release builds start from a clean cache to avoid cache poisoning
           cache: ${{ !startsWith(github.ref, 'refs/tags/') }}
-
-      - name: Cache go modules
-        if: ${{ !startsWith(github.ref, 'refs/tags/') }}
-        uses: actions/cache@v5
-        with:
-          path: ~/go/pkg/mod
-          key: ${{ runner.os }}-go-${{ matrix.go-version }}-${{ hashFiles('**/go.sum') }}
-          restore-keys: ${{ runner.os }}-go-${{ matrix.go-version }}-
 
       - name: Download go modules
         run: go mod download
