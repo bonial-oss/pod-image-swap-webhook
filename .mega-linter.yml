@@ -4,5 +4,7 @@ DISABLE:
   - SPELL
 DISABLE_LINTERS:
   - REPOSITORY_CHECKOV # It's annoyed by the helm chart in charts/
+# Offline skips API-backed audits (ref-confusion) so no token must be unsecured
+ACTION_ZIZMOR_ARGUMENTS: --offline
 GO_GOLANGCI_LINT_ARGUMENTS: --timeout=5m
 REPOSITORY_TRIVY_ARGUMENTS: --ignorefile .trivyignore.yaml
