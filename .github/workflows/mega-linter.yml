@@ -31,7 +31,6 @@ jobs:
         env:
           GOTOOLCHAIN: auto
           VALIDATE_ALL_CODEBASE: true
-          GH_TOKEN: ${{ env.GITHUB_TOKEN }}
 
       - name: Archive production artifacts
         if: success() || failure()
