@@ -2,5 +2,7 @@ apiVersion: v2
 name: pod-image-swap-webhook
 description: A webhook that replaces Pod images based on configuration values.
 type: application
-version: 0.2.0
-appVersion: "v0.1.0"
+version: 0.3.0
+# v0.2.0 image was never published; chart 0.2.0 shipped with appVersion v0.1.0.
+# v0.3.0 is the first release where chart and image versions are aligned.
+appVersion: "v0.3.0"
