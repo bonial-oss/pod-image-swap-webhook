@@ -9,7 +9,7 @@ import (
 	"testing"
 
 	"github.com/bonial-oss/pod-image-swap-webhook/pkg/config"
-	"gomodules.xyz/jsonpatch/v2"
+	"gomodules.xyz/jsonpatch/v3"
 	admissionv1 "k8s.io/api/admission/v1"
 	corev1 "k8s.io/api/core/v1"
 	"k8s.io/apimachinery/pkg/runtime"
