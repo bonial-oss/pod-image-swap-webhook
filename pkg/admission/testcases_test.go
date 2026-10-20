@@ -4,7 +4,7 @@ import (
 	"net/http"
 
 	"github.com/bonial-oss/pod-image-swap-webhook/pkg/config"
-	"gomodules.xyz/jsonpatch/v2"
+	"gomodules.xyz/jsonpatch/v3"
 	corev1 "k8s.io/api/core/v1"
 )
 
