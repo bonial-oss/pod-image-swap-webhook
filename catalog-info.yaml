@@ -3,6 +3,7 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: pod-image-swap-webhook
+  namespace: bonial-oss
   description: |
     A mutating webhook that patches Pod container images
     based on configuration rules.
@@ -17,5 +18,5 @@ metadata:
     - webhook
 spec:
   type: service
-  owner: ops
+  owner: group:default/ops
   lifecycle: production
